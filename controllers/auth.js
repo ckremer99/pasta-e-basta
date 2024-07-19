@@ -4,6 +4,11 @@ const bcrypt = require('bcrypt')
 
 const User = require('../models/user.js')
 
+router.get('/sign-out', (req, res) => {
+    req.session.destroy();
+    res.redirect('/')
+})
+
 router.get('/sign-up', (req, res) => {
     res.render('auth/sign-up.ejs')
 })

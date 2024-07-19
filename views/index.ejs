@@ -6,6 +6,7 @@
     <title>Paste e Basta</title>
 </head>
 <body>
+    <%- include('./partials/_navbar.ejs') %>
     <% if(user) { %>
         <h1>Welcome, <%= user.username %> to Pasta e Basta</h1>
     <% } else { %>

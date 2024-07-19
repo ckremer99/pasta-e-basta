@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Menu Item</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Create a New Menu Item</h1>
+    <form action="/menu-items/new">
+        <label for="itemName">Item:</label>
+        <input type="text" name="itemName" id="itemName" required/>
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price" required/>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" required/>
+        <label for="category">Select Category</label>
+        <select name="category" id="category" required>
+            <option value="Pizza">Pizza</option>
+            <option value="Pasta">Pasta</option>
+            <option value="Dessert">Dessert</option>
+        </select>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>

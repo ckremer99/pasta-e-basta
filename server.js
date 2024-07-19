@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 
 const authController = require("./controllers/auth.js");
+const menuItemsController = require("./controllers/menu-items.js")
 
 const isSignedIn = require("./middleware/is-signed-in.js");
 const passUserToView = require("./middleware/pass-user-to-view.js");
@@ -31,6 +32,8 @@ app.use(
   })
 );
 
+app.set('view engine', 'ejs');
+
 app.use("/auth", authController);
 
 app.use(passUserToView);
@@ -41,7 +44,10 @@ app.get("/", (req, res) => {
   });
 });
 
+
 app.use(isSignedIn);
+
+app.use('/menuitems', menuItemsController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}`);
