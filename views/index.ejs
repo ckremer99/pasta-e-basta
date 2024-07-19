@@ -6,7 +6,12 @@
     <title>Paste e Basta</title>
 </head>
 <body>
-    <h1>Welcome to Basta e Basta</h1>
+    <% if(user) { %>
+        <h1>Welcome, <%= user.username %> to Pasta e Basta</h1>
+    <% } else { %>
+        <h1>Welcome to Pasta e Basta</h1>
+    <% } %>
+    
     <p>A place to create your favorite Italian dishes</p>
 </body>
 </html>
