@@ -6,6 +6,7 @@ const session = require("express-session");
 const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
+const path = require("path")
 
 const authController = require("./controllers/auth.js");
 const menuItemsController = require("./controllers/menu-items.js")
@@ -23,6 +24,8 @@ const port = process.env.PORT ? process.env.PORT : "3000";
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(
   session({

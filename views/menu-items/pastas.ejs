@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzas</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Full Menu</h1>
+    <h1>Pastas</h1>
     <% pastas.forEach(pasta => { %>
         <div class="itemCard">
             <h3><%= pasta.itemName %> - <%= pasta.price %></h3>
             <p><%= pasta.description %></p>
             <a href="/menuitems/<%= user._id %>/<%= pasta._id %>/edit">Edit Item</a>
             <form action="/menuitems/<%= user._id %>/<%= pasta._id %>/delete?_method=DELETE" method="POST">
-                <button type="submit">Delete Item</button>
+                <button type="submit" id="delete-button">Delete Item</button>
             </form>
         </div>
     <% }) %>

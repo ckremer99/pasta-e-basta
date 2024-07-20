@@ -1,0 +1,78 @@
+nav {
+    background-color: red; 
+    padding: 20px;
+    font-size: 20px;
+}
+
+label {
+    font-size: 20px; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+
+.item-name {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#item-label {
+    margin-right: 20px;
+}
+
+.price {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#price-label {
+    margin-right: 20px;
+}
+
+.description-field {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 500px;
+}
+
+#description-label {
+    margin-right: 20px;
+}
+
+.category-select {
+    width: 500px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#category-label {
+    margin-right: 20px; 
+}
+
+#category {
+    height: 30px;
+}
+
+
+#submit {
+    width: 200px; 
+    margin: 20px;
+    font-size: 20px;
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+#delete-button {
+    width: 150px; 
+}

@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Menu Item</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit Menu Item</h1>
     <form action="/menuitems/<%= userId %>/<%= currentItem._id %>/edit?_method=PUT" method="POST">
-        <label for="itemName">Item:</label>
-        <input type="text" name="itemName" value="<%= currentItem.itemName %>"  id="itemName" required/>
-        <label for="price">Price:</label>
-        <input type="text" name="price" value="<%= currentItem.price %>" id="price" required/>
-        <label for="description">Description:</label>
-        <input type="text" name="description" value="<%= currentItem.description %>" id="description" required/>
-        <label for="category">Select Category</label>
-        <select name="category" id="category" required>
-            <option value="Pizza" <%= "Pizza" === currentItem.category ? 'selected' : '' %>>Pizza</option>
-            <option value="Pasta" <%= "Pasta" === currentItem.category ? 'selected' : '' %>>Pasta</option>
-            <option value="Dessert" <%= "Dessert" === currentItem.category ? 'selected' : '' %>>Dessert</option>
-        </select>
+        <div class="item-name">
+            <label for="itemName">Item:</label>
+            <input type="text" name="itemName" value="<%= currentItem.itemName %>"  id="itemName" required/>
+        </div>
+        <div class="price">
+            <label for="price">Price:</label>
+            <input type="text" name="price" value="<%= currentItem.price %>" id="price" required/>
+        </div>
+        <div class="description-field">
+            <label for="description">Description:</label>
+            <textarea type="text" name="description" id="description"rows="10" cols="50" required><%= currentItem.description %></textarea>
+        </div>
+        <div class="category-select">
+            <label for="category">Select Category</label>
+            <select name="category" id="category" required>
+                <option value="Pizza" <%= "Pizza" === currentItem.category ? 'selected' : '' %>>Pizza</option>
+                <option value="Pasta" <%= "Pasta" === currentItem.category ? 'selected' : '' %>>Pasta</option>
+                <option value="Dessert" <%= "Dessert" === currentItem.category ? 'selected' : '' %>>Dessert</option>
+            </select>
+        </div>
         <button type="submit" id="submit">Submit</button>
     </form>
 </body>
