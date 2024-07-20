@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzas</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Full Menu</h1>
+    <% pizzas.forEach(pizza => { %>
+        <div class="itemCard">
+            <h3><%= pizza.itemName %> - <%= pizza.price %></h3>
+            <p><%= pizza.description %></p>
+        </div>
+    <% }) %>
+</body>
+</html>

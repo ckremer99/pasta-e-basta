@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Menu</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Full Menu</h1>
+    <% fullMenu.forEach(item => { %>
+        <div class="itemCard">
+            <h3><%= item.itemName %> - <%= item.price %></h3>
+            <p><%= item.description %></p>
+        </div>
+    <% }) %>
+</body>
+</html>

@@ -8,7 +8,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Create a New Menu Item</h1>
-    <form action="/menu-items/new">
+    <form action="/menuitems/<%= userId %>/new" method="POST">
         <label for="itemName">Item:</label>
         <input type="text" name="itemName" id="itemName" required/>
         <label for="price">Price:</label>

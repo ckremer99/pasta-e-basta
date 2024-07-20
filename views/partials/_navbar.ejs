@@ -1,10 +1,11 @@
 <nav>
     <a href="/">Home</a>
     <% if(user) { %>
-        <a href="/">Full Menu</a>
-        <a href="/">Pizzas</a>
+        <a href="/menuitems/<%= user._id %>/full-menu">Full Menu</a>
+        <a href="/menuitems/<%= user._id %>/pizzas">Pizzas</a>
         <a href="/">Pastas</a>
         <a href="/">Desserts</a>
+        <a href="/menuitems/<%= user._id %>/new">Create New Item</a>
         <a href="/auth/sign-out">Sign Out</a>
     <% } else { %>
         <a href="/auth/sign-in">Sign In</a>
