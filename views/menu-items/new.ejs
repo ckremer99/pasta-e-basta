@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Menu Item</title>
+    <title>Edit Menu Item</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Create a New Menu Item</h1>
-    <form action="/menuitems/<%= userId %>/new" method="POST">
+    <form action="/menuitems/edit">
         <label for="itemName">Item:</label>
         <input type="text" name="itemName" id="itemName" required/>
         <label for="price">Price:</label>

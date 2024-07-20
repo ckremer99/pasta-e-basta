@@ -8,11 +8,11 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Full Menu</h1>
-    <% pizzas.forEach(pizza => { %>
+    <% pastas.forEach(pasta => { %>
         <div class="itemCard">
-            <h3><%= pizza.itemName %> - <%= pizza.price %></h3>
-            <p><%= pizza.description %></p>
-            <a href="/menuitems/<%= user._id %>/<%= pizza._id %>/edit">Edit Item</a>
+            <h3><%= pasta.itemName %> - <%= pasta.price %></h3>
+            <p><%= pasta.description %></p>
+            <a href="/menuitems/<%= user._id %>/<%= pasta._id %>/edit">Edit Item</a>
         </div>
     <% }) %>
 </body>

@@ -3,8 +3,8 @@
     <% if(user) { %>
         <a href="/menuitems/<%= user._id %>/full-menu">Full Menu</a>
         <a href="/menuitems/<%= user._id %>/pizzas">Pizzas</a>
-        <a href="/">Pastas</a>
-        <a href="/">Desserts</a>
+        <a href="/menuitems/<%= user._id %>/pastas">Pastas</a>
+        <a href="/menuitems/<%= user._id %>/desserts">Desserts</a>
         <a href="/menuitems/<%= user._id %>/new">Create New Item</a>
         <a href="/auth/sign-out">Sign Out</a>
     <% } else { %>

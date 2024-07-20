@@ -12,6 +12,7 @@
         <div class="itemCard">
             <h3><%= item.itemName %> - <%= item.price %></h3>
             <p><%= item.description %></p>
+            <a href="/menuitems/<%= user._id %>/<%= item._id %>/edit">Edit Item</a>
         </div>
     <% }) %>
 </body>

@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Menu Item</title>
+    <title>New Menu Item</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Create a New Menu Item</h1>
-    <form action="/menuitems/edit">
+    <form action="/menuitems/<%= userId %>/new" method="POST">
         <label for="itemName">Item:</label>
-        <input type="text" name="itemName" id="itemName" required/>
+        <input type="text" name="itemName" value="<%= currentItem.itemName %>"  id="itemName" required/>
         <label for="price">Price:</label>
-        <input type="text" name="price" id="price" required/>
+        <input type="text" name="price" value="<%= currentItem.price %>" id="price" required/>
         <label for="description">Description:</label>
-        <input type="text" name="description" id="description" required/>
+        <input type="text" name="description" value="<%= currentItem.description %>" id="description" required/>
         <label for="category">Select Category</label>
         <select name="category" id="category" required>
-            <option value="Pizza">Pizza</option>
-            <option value="Pasta">Pasta</option>
-            <option value="Dessert">Dessert</option>
+            <option value="Pizza" <%= "Pizza" === currentItem.category ? 'selected' : '' %>>Pizza</option>
+            <option value="Pasta" <%= "Pasta" === currentItem.category ? 'selected' : '' %>>Pasta</option>
+            <option value="Dessert" <%= "Dessert" === currentItem.category ? 'selected' : '' %>>Dessert</option>
         </select>
         <button type="submit" id="submit">Submit</button>
     </form>
 </body>
 </html>
+

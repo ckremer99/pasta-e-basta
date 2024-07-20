@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzas</title>
+    <title>Desserts</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Full Menu</h1>
-    <% pizzas.forEach(pizza => { %>
+    <% desserts.forEach(dessert => { %>
         <div class="itemCard">
-            <h3><%= pizza.itemName %> - <%= pizza.price %></h3>
-            <p><%= pizza.description %></p>
-            <a href="/menuitems/<%= user._id %>/<%= pizza._id %>/edit">Edit Item</a>
+            <h3><%= dessert.itemName %> - <%= dessert.price %></h3>
+            <p><%= dessert.description %></p>
+            <a href="/menuitems/<%= user._id %>/<%= dessert._id %>/edit">Edit Item</a>
         </div>
     <% }) %>
 </body>
