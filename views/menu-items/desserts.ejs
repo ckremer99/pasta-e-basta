@@ -13,6 +13,9 @@
             <h3><%= dessert.itemName %> - <%= dessert.price %></h3>
             <p><%= dessert.description %></p>
             <a href="/menuitems/<%= user._id %>/<%= dessert._id %>/edit">Edit Item</a>
+            <form action="/menuitems/<%= user._id %>/<%= dessert._id %>/delete?_method=DELETE" method="POST">
+                <button type="submit">Delete Item</button>
+            </form>
         </div>
     <% }) %>
 </body>

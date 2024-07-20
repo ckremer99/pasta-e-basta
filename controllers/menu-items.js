@@ -106,4 +106,29 @@ router.post('/:userId/new', async (req, res) => {
     }
 })
 
+router.put('/:userId/:itemId/edit', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.params.userId);
+        const currentItem = currentUser.menuItems.id(req.params.itemId)
+        currentItem.set(req.body)
+        await currentUser.save();
+        res.redirect(`/menuitems/${req.params.userId}/full-menu`)
+    } catch (error) {
+        console.log(error)
+        res.redirect('/')
+    }
+})
+
+router.delete('/:userId/:itemId/delete', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.params.userId);
+        currentUser.menuItems.id(req.params.itemId).deleteOne();
+        await currentUser.save();
+        res.redirect(`/menuitems/${req.params.userId}/full-menu`)
+    } catch (error) {
+        console.log(error)
+        res.redirect('/')
+    }
+})
+
 module.exports = router; 
