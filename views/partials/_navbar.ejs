@@ -1,14 +1,14 @@
 <nav>
-  <a href="/">Home</a>
+  <a href="/" class="nav-links">Home</a>
   <% if(user) { %>
-  <a href="/menuitems/<%= user._id %>/full-menu">Full Menu</a>
-  <a href="/menuitems/<%= user._id %>/pizzas">Pizzas</a>
-  <a href="/menuitems/<%= user._id %>/pastas">Pastas</a>
-  <a href="/menuitems/<%= user._id %>/desserts">Desserts</a>
-  <a href="/menuitems/<%= user._id %>/new">Create New Item</a>
-  <a href="/auth/sign-out">Sign Out</a>
+  <a href="/menuitems/<%= user._id %>/full-menu" class="nav-links">Full Menu</a>
+  <a href="/menuitems/<%= user._id %>/pizzas" class="nav-links">Pizzas</a>
+  <a href="/menuitems/<%= user._id %>/pastas" class="nav-links">Pastas</a>
+  <a href="/menuitems/<%= user._id %>/desserts" class="nav-links">Desserts</a>
+  <a href="/menuitems/<%= user._id %>/new" class="nav-links">Create New Item</a>
+  <a href="/auth/sign-out" class="nav-links">Sign Out</a>
   <% } else { %>
-  <a href="/auth/sign-in">Sign In</a>
-  <a href="/auth/sign-up">Sign Up</a>
+  <a href="/auth/sign-in" class="nav-links">Sign In</a>
+  <a href="/auth/sign-up" class="nav-links">Sign Up</a>
   <% } %>
 </nav>

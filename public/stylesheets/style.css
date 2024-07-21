@@ -1,7 +1,19 @@
 nav {
-    background-color: red; 
-    padding: 20px;
+    background-color: rgb(163, 0, 0); 
+    padding: 40px;
     font-size: 20px;
+    border-radius: 10px;
+}
+
+.nav-links {
+    width: 100px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 2.5px;
 }
 
 label {
@@ -75,4 +87,43 @@ form {
 
 #delete-button {
     width: 150px; 
+}
+
+.item-card {
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
+.name-and-price {
+    margin: 20px;
+}
+
+.description-area {
+    margin: 20px; 
+}
+
+.action-buttons {
+    margin: 20px;
+    display: flex;
+}
+
+#edit-link {
+    width: 100px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    color: black;
+    background-color: white; 
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #000;
+    font-size: 14px;
+    padding: 2.5px;
+}
+
+#edit-link:hover {
+    background-color: lightgray;
+}
+
+#app-description {
+    font-size: 20px; 
 }

@@ -98,7 +98,7 @@ router.post('/:userId/new', async (req, res) => {
         const currentUser = await User.findById(req.params.userId);
         currentUser.menuItems.push(req.body);
         currentUser.save()
-        res.redirect('/')
+        res.redirect(`/menuitems/${req.params.userId}/full-menu`)
         
     } catch (error) {
         console.log(error)
