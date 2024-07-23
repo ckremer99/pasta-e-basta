@@ -20,7 +20,6 @@ router.get('/:userId/:itemId/edit', async (req, res) => {
             userId: req.params.userId
         });
     } catch (error) {
-        console.log(error);
         res.redirect('/');
     }
 });
@@ -34,7 +33,6 @@ router.get('/:userId/full-menu', async (req, res) => {
            user: currentUser
         })
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -52,7 +50,6 @@ router.get('/:userId/pizzas', async (req, res) => {
         })
 
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -70,7 +67,6 @@ router.get('/:userId/pastas', async (req, res) => {
         })
 
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -88,7 +84,6 @@ router.get('/:userId/desserts', async (req, res) => {
         })
 
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -101,7 +96,6 @@ router.post('/:userId/new', async (req, res) => {
         res.redirect(`/menuitems/${req.params.userId}/full-menu`)
         
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -114,7 +108,6 @@ router.put('/:userId/:itemId/edit', async (req, res) => {
         await currentUser.save();
         res.redirect(`/menuitems/${req.params.userId}/full-menu`)
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
@@ -126,7 +119,6 @@ router.delete('/:userId/:itemId/delete', async (req, res) => {
         await currentUser.save();
         res.redirect(`/menuitems/${req.params.userId}/full-menu`)
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 })
