@@ -6,22 +6,25 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
-<body class="sign-in-body">
-    <h1 class="sign-in-header">Sign Up</h1>
-    <form action="/auth/sign-up" method="POST" class="sign-in-form">
-        <div class="username">
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required />
-        </div>
-        <div class="password">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required />
-        </div>
-        <div class="password">
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" required/>
-        </div>
-        <button type="submit" class="sign-in-submit">Sign Up</button>
-    </form>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="sign-in-body">
+        <h1 class="sign-in-header">Sign Up</h1>
+        <form action="/auth/sign-up" method="POST" class="sign-in-form">
+            <div class="username">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required />
+            </div>
+            <div class="password">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required />
+            </div>
+            <div class="password">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required/>
+            </div>
+            <button type="submit" class="sign-in-submit">Sign Up</button>
+        </form>
+    </div>
 </body>
 </html>

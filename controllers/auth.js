@@ -9,12 +9,26 @@ router.get('/sign-out', (req, res) => {
     res.redirect('/')
 })
 
-router.get('/sign-up', (req, res) => {
-    res.render('auth/sign-up.ejs')
+router.get('/sign-up', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.params.userId);
+        res.render('auth/sign-up.ejs', {
+            user: currentUser
+        })
+    } catch (error) {
+        res.redirect('/')
+    }
 })
 
-router.get('/sign-in', (req, res) => {
-    res.render('auth/sign-in.ejs')
+router.get('/sign-in', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.params.userId);
+        res.render('auth/sign-in.ejs', {
+            user: currentUser
+        })
+    } catch (error) {
+        res.redirect('/')
+    }
 })
 
 router.post('/sign-up', async (req, res) => {
